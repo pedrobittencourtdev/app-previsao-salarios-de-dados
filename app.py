@@ -3,6 +3,8 @@ import streamlit as st
 import mlflow
 import joblib
 
+
+
 @st.cache_resource
 def load_model():
     # Carrega o modelo direto do arquivo, sem depender da internet ou do MLflow!
