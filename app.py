@@ -3,13 +3,10 @@ import streamlit as st
 import mlflow
 import joblib
 
-@st.cache_resource(ttl='1day')
+@st.cache_resource
 def load_model():
-    mlflow.set_tracking_uri("http://127.0.0.1:5000")
-    models =[i for i in  mlflow.search_registered_models() if i.name=="salario-model"]
-    last_version = max([int(i.version) for i in models[0].latest_versions])
-    model = mlflow.sklearn.load_model(f"models:///salario-model/{last_version}")
-    return model
+    # Carrega o modelo direto do arquivo, sem depender da internet ou do MLflow!
+    return joblib.load('modelo_salarios.joblib')
 
 model = load_model()
 
