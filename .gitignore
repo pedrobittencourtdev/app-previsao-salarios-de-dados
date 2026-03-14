@@ -1,0 +1,12 @@
+# Ambiente Virtual
+.venv/
+
+# Configurações do Editor
+.vscode/
+
+# Arquivos locais do MLflow
+mlartifacts/
+mlflow.db
+
+# Dados
+data/
