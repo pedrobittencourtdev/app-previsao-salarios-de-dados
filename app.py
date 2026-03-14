@@ -21,7 +21,7 @@ st.markdown("# Data Salary")
 col1, col2,col3, col4 = st.columns(4)
 
 with col1:
-    idade = st.number_input("idade",
+    idade = st.number_input("Idade",
                         min_value=data_template['idade'].min(),
                         max_value=100)
 
