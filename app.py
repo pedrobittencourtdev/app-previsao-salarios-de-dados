@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import mlflow
+import joblib
 
 @st.cache_resource(ttl='1day')
 def load_model():

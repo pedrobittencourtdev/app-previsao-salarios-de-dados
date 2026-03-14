@@ -112,6 +112,7 @@ mlflow.set_experiment(experiment_id=1)
 
 # %%
 from sklearn import metrics
+import mlflow
 
 with mlflow.start_run():
 
